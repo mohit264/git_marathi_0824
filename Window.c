@@ -1,13 +1,20 @@
 #include<stdio.h>
 #include<Windows.h>
 
+
 // Global Function Declarations
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
+// User Registration Functionality
 void UserRegistration()
 {
     printf("Implementing User Registration \n");
+}
     
+// Login Functionality Implementation
+void UserLogin(char *userName, char *password)
+{
+    printf("User Login Functionality Implemented");
 }
 
 // Entry Point Function
@@ -61,7 +68,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLi
         TranslateMessage(&msg);
         DispatchMessage(&msg);
     }
-    
+
     return((int) msg.wParam);
 }
 
@@ -74,11 +81,15 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
     case WM_DESTROY:
         PostQuitMessage(0);
         break;
-    
+    case 2:
+	UserRegistration();
+	break;
+    case 3:
+	UserLogin();
+	break;
     default:
         break;
     }
 
     return (DefWindowProc(hwnd, iMsg, wParam, lParam));
 }
-
