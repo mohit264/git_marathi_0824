@@ -1,0 +1,500 @@
+  166  git ls-tree -d
+  167  git ls-tree -d a51e715
+  168  git ls-tree -r a51e715
+  169  git commit-tree a51e715 -m "Added new file"
+  170  git cat-file -p a34796cb55
+  171  git status
+  172  git update-ref refs/heads/master a34796cb556dd3a2b35cfa3cb709832745d6261c
+  173  git status
+  174  git log
+  175  ls .git/objects
+  176  clear
+  177  cd /d/git_solidfication/
+  178  git status
+  179  ls .git
+  180  ls .git/refs/heads
+  181  echo "ref: refs/heads/mohit" > .git/HEAD
+  182  git status
+  183  ls .git/objects/
+  184  clear
+  185  echo "Git is super awesome!" > learnGit.txt
+  186  rm learnGit.txt 
+  187  ls 
+  188  ls -a
+  189  echo "Git is super awesome!" | git hash-object --stdin -w
+  190  ls .git/objects/
+  191  git status
+  192  git update-index --add --cacheinfo 100644 6216b8a4a90bd980f49fd5211be3944b0b879828 learningGit.txt
+  193  clear
+  194  git status
+  195  ls .git
+  196  echo "Git is super awesome!" > learningGit.txt
+  197  git status
+  198  clear
+  199  git write-tree
+  200  git cat-file -t 3de750ae01482b93
+  201  git cat-file -p 3de750ae01482b93
+  202  git commit-tree 3de750ae01482b936699d680158afc9aa843a2f4 -m "Initial commit!"
+  203  git cat-file -t 97c8abeb
+  204  git status
+  205  ls .git/refs/heads/
+  206  git update-ref refs/heads/mohit 
+  207  97c8abeb644974d9ee255f46d73ce0ae2c687726
+  208  git update-ref refs/heads/mohit 97c8abeb644974d9ee255f46d73ce0ae2c687726
+  209  ls .git/refs/heads/
+  210  git status
+  211  git log
+  212  git cat-file -p 97c8abeb644
+  213  cd ..
+  214  mkdir test3
+  215  clear
+  216  cd test3
+  217  git status
+  218  mkdir .git
+  219  git status
+  220  echo "ref: refs/heads/mohit" > .git/HEAD
+  221  git status
+  222  mkdir refs
+  223  git status
+  224  mkdir refs/heads
+  225  git status
+  226  mkdir .git/refs
+  227  git
+  228  git status
+  229  clear
+  230  mkdir .git/refs/heads
+  231  git status
+  232  mkdir .git/objects
+  233  git status
+  234  cd ../git_solidfication/
+  235  history > git_from_scratch.txt
+  236  clear
+  237  echo "Some Garbage Content" > a.txt
+  238  git status
+  239  git add a.txt
+  240  git status
+  241  git write-tree
+  242  git cat-file -p c13afaa8
+  243  git commit-tree c13afaa86aec149a96b18b870496502b51530573 -m "Added a file"
+  244  git status
+  245  cat .git/refs/heads/master
+  246  cat .git/refs/heads/mohit
+  247  git cat-file -t 653cb6f1c164209c9dba427b3ea63c75b76a8db6
+  248  git cat-file -p 653cb6f1c164209c9dba427b3ea63c75b76a8db6
+  249  git update-ref refs/heads/mohit 653cb6f1c164209c9dba427b3ea63c75b76a8db6
+  250  git status
+  251  cd /d/git_06_04_24/
+  252  git cat-file -p 723fdb
+  253  cat temp-tree.txt | git mktree
+  254  cat temp-tree | git mktree
+  255  cat temp-tree | git mktree
+  256  clear
+  257  git ls-files
+  258  git status
+  259  git commit -a -m "Added day 3 history and object diagram files"
+  260  clear
+  261  git status
+  262  git log -1
+  263  git cat-file -p ecfc9a7506
+  264  git cat-file -p d418
+  265  git add .
+  266  git status
+  267  git commit -m "Added day 3 history and object diagram files"
+  268  clear
+  269  git status
+  270  git ls-files
+  271  git read-tree
+  272  git read-tree --empty
+  273  ks
+  274  git status
+  275  git reset --hard
+  276  clea
+  277  clear
+  278  git status
+  279  git log
+  280  clear
+  281  git cat-file -p  44d8919ef892fc583e985caafc76b02d1b0e191
+  282  git cat-file -p 330c7de
+  283  git cat-file -p aec4
+  284  clear
+  285  git log-1
+  286  git log -1
+  287  git log -2
+  288  git cat-file -p ecfc9a7506
+  289  git cat-file -p d4181e8
+  290  git cat-file -p f8383403
+  291  git cat-file -p 34533418c
+  292  cat .git/refs/heads/
+  293  ls .git/refs/heads/
+  294  clear
+  295  cat .git/refs/heads/master 
+  296  echo "Testing Master Reference to latest commit" > branch.txt
+  297  git status
+  298  git add branch.txt 
+  299  git status
+  300  git commit -m "Added new file"
+  301  cat .git/refs/heads/master 
+  302  clear
+  303  git cat-file -p e73bc3246
+  304  git cat-file -p 0593bc9f
+  305  cat .git/refs/heads/master 
+  306  clear
+  307  git branch
+  308  git branch feature/my-feature1
+  309  git branch
+  310  cat .git/refs/heads/feature/my-feature1 
+  311  git switch feature/my-feature1 
+  312  cat .git/HEAD 
+  313  clear
+  314  git branch
+  315  echo "Working on my new feature" > feature1.tdt
+  316  git status
+  317  git add feature1.tdt 
+  318  git commit -m "Added new feature"
+  319  git cat-file -p 7f630
+  320  clear
+  321  git cat-file -p 91e8709a
+  322  cat .git/HEAD 
+  323  echo "New content added in Feature1" >> feature1.tdt 
+  324  git status
+  325  git add feature1.tdt 
+  326  git status
+  327  git commit -m "Updated content"
+  328  cat .git/refs/heads/feature/my-feature1 
+  329  cat .git/HEAD 
+  330  clear
+  331  ls .git/refs/heads/
+  332  history > git_day4
+  333  history > git_day4.txt
+  334  tree
+  335  clear
+  336  git switch master
+  337  git status
+  338  git add .
+  339  git staus 
+  340  git status
+  341  clea
+  342  clear
+  343  git commit -m "Added Day4 files and updated diagram"
+  344  git staus
+  345  git status
+  346  git ls-files
+  347  clear
+  348  git tag
+  349  git tag -a Day5 -m "Day5 understanding"
+  350  git tag
+  351  git cat-file -t Day5
+  352  git cat-file -p Day5
+  353  clear
+  354  git log -1
+  355  git cat-file -p Day5
+  356  echo "Created new Tag on Day5" > tag.txt
+  357  git add .
+  358  git status
+  359  git commit -m "Added tag File"
+  360  git log -1
+  361  git cat-file -p e5a7a0f8260d
+  362  clear
+  363  cat .git/refs/tags/Day5
+  364  cat-file -p 9928087efdcd78c
+  365  git cat-file -p 9928087efdcd78c
+  366  git log -2
+  367  cat .git/refs/tags/Day5
+  368  git cat-file -t 9928087efdcd78c7d52b2c3ca1a7c7dc718a023
+  369  git cat-file -p 9928087efdcd78c7d52b2c3ca1a7c7dc718a023
+  370  git tag
+  371  git tag sometag
+  372  git tag
+  373  git log -1
+  374  clear
+  375  cat .git/refs/tags/Day5 
+  376  cat .git/refs/tags/sometag 
+  377  git log -1
+  378  git cat-file -p 9928087efdcd78c7
+  379  git cat-file -t 9928087efdcd78c7
+  380  clear
+  381  cat .git/refs/tags/sometag 
+  382  git log -1
+  383  git cat-file -t e5a7a0f8260
+  384  cat .git/refs/tags/Day5 
+  385  git cat-file -p Day5
+  386  git cat-file -p sometag
+  387  git chekout Day5
+  388  git checkout Day5
+  389  git checkout master
+  390  clear
+  391  cat .git/HEAD 
+  392  git switch feature/my-feature1 
+  393  cat .git/HEAD 
+  394  cat .git/refs/heads/master
+  395  cat .git/refs/heads/feature/my-feature1 
+  396  clear
+  397  git switch master
+  398  cat .git/HEAD 
+  399  clear
+  400  git log
+  401  clear
+  402  git checkout ecfc9a7506a98bc
+  403  git cat-file -p ecfc9a7
+  404  clear
+  405  git status
+  406  cat .git/HEAD 
+  407  echo "Started working on Federated Authentication" > Federated_start.txt
+  408  git status
+  409  git add Federated_start.txt 
+  410  git status
+  411  git commit -m "implitmented code for Federated Auth"
+  412  clear
+  413  cat .git/HEAD 
+  414  git ca-file -p 2abdf25
+  415  git cat-file -p 2abdf25
+  416  echo "Completed Implementation of Federated Authentication" > Federated_End.txt
+  417  clear
+  418  git status
+  419  git add .
+  420  git status
+  421  cat .git/HEAD 
+  422  clear
+  423  git commit -m "Federated Auth POC done"
+  424  cat .git/HEAD 
+  425  git switch master
+  426  cat .git/refs/heads/master 
+  427  clear
+  428  cat .git/HEAD 
+  429  git checkout 56fc
+  430  cat .git/HEAD 
+  431  clear
+  432  git switch master
+  433  clear
+  434  cat .git/HEAD 
+  435  cat .git/refs/master
+  436  cat .git/refs/heads/master 
+  437  echo "some temp" > file_temp.txt
+  438  git add .
+  439  git commit -m "Added temp file"
+  440  cat .git/HEAD 
+  441  cat .git/refs/heads/master 
+  442  cler
+  443  clear
+  444  git cat-file -p 7e62ed5
+  445  cd /d/git_solidfication/
+  446  mkdir /d/git_solidfication
+  447  cd /d/git_solidfication/
+  448  ls
+  449  ls -a
+  450  clear
+  451  git status
+  452  echo "Hello, World!" | git hash-object
+  453  echo "Hello, World!" | git hash-object --stdin
+  454  echo "Hello, World!" | git hash-object --stdin -w
+  455  cd ..
+  456  mkdir test2
+  457  cd test2
+  458  git init
+  459  clear
+  460  echo "Hello, World!" | git hash-object --stdin -w
+  461  echo "Hello, World!" | git hash-object --stdin
+  462  echo "Hello, World!" | git hash-object --stdin -w
+  463  clear
+  464  echo "Hello, World!" | git hash-object --stdin -w
+  465  git inint
+  466  git init
+  467  ls -a
+  468  echo "Hello, World!" | git hash-object --stdin -w
+  469  ls .git/objects/
+  470  clear
+  471  cd /d/git_solidfication/
+  472  clear
+  473  echo "Hello, World!" | git hash-object --stdin -w
+  474  git status
+  475  ls -a
+  476  mkdir .git
+  477  git status
+  478  clear
+  479  ls -a
+  480  mkdir .git/objects
+  481  git status
+  482  mkdir .git/refs
+  483  git status
+  484  mkdir .git/refs/heads
+  485  git status
+  486  ls -a
+  487  ls .git -a
+  488  ls .git/refs/ -a
+  489  clear
+  490  cd test2
+  491  cd ../test2
+  492  ls .git/refs/heads/
+  493  cat .git/HEAD 
+  494  vim .git/HEAD
+  495  echo "My First File" > first.text
+  496  git add .
+  497  git commit -m "My First Commit"
+  498  ls .git/refs/heads/
+  499  clear
+  500  git log -3 --oneline
+  501  git reflog
+  502  git cat-file -p 0ed0526
+  503  clear
+  504  cd ../git_marathi/
+  505  clear
+  506  git checkout -b feature/jira01_user_reg
+  507  cat .git/refs/heads/master
+  508  cat .git/refs/heads/feature/jira01_user_reg 
+  509  git switch master
+  510  git switch -c feature/jira02_user_login
+  511  git branch
+  512  git status
+  513  git add Git_working.jpg "detached head.gif" git_reset.png
+  514  git status
+  515  git switch master
+  516  git status
+  517  git commit -m "Added git reset and detached head visuals"
+  518  git status
+  519  git switch master
+  520  clear
+  521  git switch feature/jira01_user_reg 
+  522  git merge master
+  523  git status
+  524  clear
+  525  git log -1 --oneline
+  526  git branch
+  527  git switch feature/jira02_user_login 
+  528  cat .git/refs/heads/master
+  529  git log -1
+  530  git merge master
+  531  clear
+  532  git log -1
+  533  git switch feature/jira01_user_reg 
+  534  clear
+  535  git status
+  536  git add Window.c 
+  537  git commit -m "Implemented User Registration Functionality"
+  538  git switch feature/jira02_user_login 
+  539  clear
+  540  git status
+  541  git add Window.c 
+  542  git status
+  543  git commit -m "Added User Login implementation feature"
+  544  git switch feature/jira01_user_reg 
+  545  clear
+  546  cat .git/refs/heads/feature/jira02_user_login 
+  547  git cat-file -p 2ebc5d
+  548  git cat-file -p 1b70790d
+  549  git cat-file -p 556c2e8f4431
+  550  clear
+  551  git merge feature/jira02_user_login 
+  552  vi Window.c 
+  553  git status
+  554  git add .
+  555  git status
+  556  git commit
+  557  git status
+  558  git log -1
+  559  clear
+  560  git cat-file -p ad91c6494b521d8a
+  561  clear
+  562  git switch feature/jira02_user_login 
+  563  git log -1
+  564  cat .git/HEAD 
+  565  clear
+  566  git merge feature/jira01_user_reg 
+  567  git switch
+  568  git switch master
+  569  clear
+  570  git status
+  571  git log -1 --oneline
+  572  git merge feature/jira01_user_reg 
+  573  git status
+  574  clear
+  575  git add .
+  576  git commit -m "Added merge visualization"
+  577  clear
+  578  git log -5 --oneline
+  579  clear
+  580  git log -1 --oneline
+  581  git branch feature/jira01-user-reg-rebasing
+  582  echo "Git Day 8 is the last day for version control layer!" > git_day8.txt
+  583  git add 
+  584  git add .
+  585  git commit -m "Added git day 8 file"
+  586  clear
+  587  git switch feature/jira01-user-reg-rebasing
+  588  echo "First File in Rebase User Reg" > First_rebase.txt
+  589  git add .
+  590  git commit -m "Added First File"
+  591  echo "Second File in Rebase User Reg" > Second_rebase.txt
+  592  git add .
+  593  git commit -m "Added Second Rebase File"
+  594  echo "Third File in Rebase User Reg" > Third_rebase.txt
+  595  git add .
+  596  clear
+  597  git commit -m "Added Third Rebase File"
+  598  git switch master
+  599  echo "Fixed Production Bug" > prod_bug.txt
+  600  git status
+  601  git add .
+  602  git commit -m "Added prod_bug.txt File"
+  603  git switch feature/jira01-user-reg-rebasing 
+  604  clear
+  605  git rebase master
+  606  git log -6
+  607  clear
+  608  git cat-file -p 1e51
+  609  git log
+  610  clear
+  611  git log -7
+  612  git log -7 --oneline
+  613  git log -7
+  614  git cat-file -p 1e51
+  615  git cat-file -p 6330b4d93
+  616  clear
+  617  git log -7 --oneline
+  618  git switch master
+  619  clear
+  620  git rebase feature/jira01-user-reg-rebasing
+  621  git rev-parse HEAD
+  622  echo "In the middle of some work" > jira_ticket_random.txt
+  623  echo "Added some code files for the ticket" > Code-jira_ticket_random.txt
+  624  ls -a
+  625  echo "Make mytree file garbage" >> mytree.txt 
+  626  clear
+  627  git status
+  628  git status
+  629  clear
+  630  git status
+  631  git stash --h
+  632  clear
+  633  git stash --include-untracked
+  634  git status
+  635  git stash list
+  636  git stash pop
+  637  clear
+  638  git stash list
+  639  git stash --include-untracked
+  640  clear
+  641  git cat-file -p 6b2bb382fe
+  642  git cat-file -t
+  643  git cat-file -t 6b2bb382fe
+  644  clear
+  645  echo "something related to git lifecycle" > events.txt
+  646  git add .
+  647  git commit
+  648  git commit
+  649  git commit -m "added new file"
+  650  git log -1
+  651  git commit -m "added new file"
+  652  git commit -m "added new file"
+  653  lear
+  654  clear
+  655  git log
+  656  clear
+  657  git status
+  658  git add .
+  659  git commit -m "Added rebase and centralized version control visualizations"
+  660  git remote add origin https://github.com/mohit264/git_marathi_0824.git
+  661  git push
+  662  git push -u master
+  663  git push --set-upstream origin master
+  664  clear
+  665  history > git_commands.txt
